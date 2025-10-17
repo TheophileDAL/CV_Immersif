@@ -1,0 +1,74 @@
+body {
+      margin: 0;
+      background-color: #0a0a0a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Carlito', sans-serif;
+      font-weight: 400;
+    }
+
+    #welcome-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(10,10,10,0.85);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        font-size: 1.5rem;
+        z-index: 100;
+        opacity: 1;
+        transition: opacity 0.8s ease;
+    }
+
+    /* ----- Conteneur principal ----- */
+    #cv-container {
+      position: relative;
+      max-width: 900px; /* adapte à ton CV */
+      width: 100%;
+      aspect-ratio: 210 / 297; /* A4 vertical */
+      overflow: hidden;
+    }
+
+    /* ----- Image du CV ----- */
+    .cv-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* ----- Zones interactives ----- */
+    .zone {
+      position: absolute;
+      cursor: pointer;
+      opacity: 0; /* passe à 0.3 temporairement pour caler */
+      transition: opacity 0.3s;
+    }
+
+    /* effet visuel au survol */
+    .zone_gauche:hover {
+      opacity: 1;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .zone_droite:hover {
+      opacity: 1;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .separator {
+        width: 40%;           /* longueur de la ligne */
+        border: 0;            /* supprime le style par défaut */
+        border-top: 2px solid #fff; /* ligne blanche */
+        margin: 15px 0;       /* espace au-dessus et en dessous */
+        opacity: 0.6;         /* légère transparence */
+    }

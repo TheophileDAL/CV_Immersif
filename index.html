@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <link href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV immersif - Théophile DAL</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <div id="cv-container">
+    <!-- Ton image de CV -->
+    <img src="CV_Théophile_DAL_FR.jpg" alt="CV Théophile DAL" class="cv-image">
+
+    <!-- Overlay de bienvenue -->
+    <div id="welcome-overlay">
+        <p>Bienvenue sur mon CV interactif et immersif</p>
+        <hr class="separator">
+        <p>Survolez les différentes parties et montez votre volume</p>
+    </div>
+
+    <!-- Zones interactives (ajuste les positions en %) -->
+    <div class="zone zone_gauche" data-zone="coordonnees"
+         style="top: 0%; left: 0%; width: 38%; height: 43.5%;"></div>
+
+    <div class="zone zone_gauche" data-zone="competences"
+         style="top: 43.5%; left: 0%; width: 38%; height: 21%;"></div>
+
+    <div class="zone zone_gauche" data-zone="langues"
+         style="top: 64%; left: 0%; width: 38%; height: 11%;"></div>
+
+    <div class="zone zone_gauche" data-zone="passions"
+         style="top: 75%; left: 0%; width: 38%; height: 25%;"></div>
+
+    <div class="zone zone_droite" data-zone="parcours_esis"
+         style="top: 0%; left: 38%; width: 100%; height: 25%;"></div>
+    
+    <div class="zone zone_droite" data-zone="parcours_efrei"
+         style="top: 25%; left: 38%; width: 100%; height: 8%;"></div>
+
+    <div class="zone zone_droite" data-zone="parcours_bac"
+         style="top: 33%; left: 38%; width: 100%; height: 7%;"></div>
+
+    <div class="zone zone_droite" data-zone="projets_compo"
+         style="top: 40%; left: 38%; width: 100%; height: 10%;"></div>
+    
+    <div class="zone zone_droite" data-zone="projets_instal"
+         style="top: 50%; left: 38%; width: 100%; height: 6%;"></div>
+    
+    <div class="zone zone_droite" data-zone="projets_video"
+         style="top: 56%; left: 38%; width: 100%; height: 8%;"></div>
+
+    <div class="zone zone_droite" data-zone="ex_pro_gadd"
+         style="top: 64%; left: 38%; width: 100%; height: 11%;"></div>
+
+    <div class="zone zone_droite" data-zone="ex_pro_segula"
+         style="top: 75%; left: 38%; width: 100%; height: 9%;"></div>
+
+    <div class="zone zone_droite" data-zone="ex_pro_motowatt"
+         style="top: 84%; left: 38%; width: 100%; height: 6%;"></div>
+
+    <div class="zone zone_droite" data-zone="ex_pro_vendeur"
+         style="top: 90%; left: 38%; width: 100%; height: 10%;"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
