@@ -32,10 +32,31 @@ body {
     /* ----- Conteneur principal ----- */
     #cv-container {
       position: relative;
-      max-width: 900px; /* adapte à ton CV */
+      max-width: 900px;
       width: 100%;
-      aspect-ratio: 210 / 297; /* A4 vertical */
+      aspect-ratio: 210 / 297;
       overflow: hidden;
+    }
+
+    /* ----- Zones interactives ----- */
+    .zone {
+      position: absolute;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    /* ----- liens ----- */
+    .link-zone {
+        position: absolute;
+        display: block;
+        z-index: 10;
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.025); /* bleu transparent */
+    }
+
+    .link-zone:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+        border-color: #ffcc00;
     }
 
     /* ----- Image du CV ----- */
@@ -46,22 +67,12 @@ body {
       display: block;
     }
 
-    /* ----- Zones interactives ----- */
-    .zone {
-      position: absolute;
-      cursor: pointer;
-      opacity: 0; /* passe à 0.3 temporairement pour caler */
-      transition: opacity 0.3s;
-    }
-
     /* effet visuel au survol */
     .zone_gauche:hover {
-      opacity: 1;
       background-color: rgba(255, 255, 255, 0.1);
     }
 
     .zone_droite:hover {
-      opacity: 1;
       background-color: rgba(0, 0, 0, 0.1);
     }
 
