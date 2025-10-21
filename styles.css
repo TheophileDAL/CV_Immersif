@@ -9,6 +9,16 @@ body {
   font-weight: 400;
 }
 
+body, html {
+  user-select: none;            /* standard */
+  -webkit-user-select: none;    /* Safari / Chrome */
+  -moz-user-select: none;       /* Firefox */
+  -ms-user-select: none;        /* Edge ancien */
+  -webkit-touch-callout: none; /* empêche le menu contextuel */
+  -webkit-tap-highlight-color: transparent; /* enlève le halo bleu */
+  touch-action: none; /* bloque les gestes de zoom/pan */
+}
+
 #welcome-overlay {
     position: absolute;
     top: 0;
@@ -22,7 +32,6 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
     font-size: 1.5rem;
     z-index: 100;
     opacity: 1;

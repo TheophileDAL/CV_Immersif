@@ -45,6 +45,14 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     immersiveBtn.addEventListener('click', () => {
+
+        // Initialiser le contexte audio sur iOS
+        if (typeof window.AudioContext !== "undefined") {
+            const audioCtx = new AudioContext();
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+        }
         
         // Si overlay toujours visible, on le fait disparaître tout de suite
         if (overlay && overlay.style.opacity !== "0") {
@@ -64,6 +72,7 @@ window.addEventListener('DOMContentLoaded', () => {
     zones.forEach(zone => {
         const sound = new Audio(`Sounds/${zone.dataset.zone}.mp3`);
 
+        // Survol souris
         zone.addEventListener('mouseenter', () => {
             if (!immersiveEnabled) return;
             sound.currentTime = 0;
@@ -71,6 +80,19 @@ window.addEventListener('DOMContentLoaded', () => {
         });
 
         zone.addEventListener('mouseleave', () => {
+            sound.pause();
+            sound.currentTime = 0;
+        });
+
+        // Ajout pour les écrans tactiles
+        zone.addEventListener('touchstart', (e) => {
+            if (!immersiveEnabled) return;
+            e.preventDefault(); // empêche le zoom/scroll
+            sound.currentTime = 0;
+            sound.play();
+        });
+
+        zone.addEventListener('touchend', () => {
             sound.pause();
             sound.currentTime = 0;
         });
