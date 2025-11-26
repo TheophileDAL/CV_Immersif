@@ -70,7 +70,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     /* ---------- Script pour gérer les sons ---------- */
     zones.forEach(zone => {
-        const sound = new Audio(`Sounds/${zone.dataset.zone}.mp3`);
+        const sound = new Audio(`Normalized_Sounds/${zone.dataset.zone}.mp3`);
 
         // Survol souris
         zone.addEventListener('mouseenter', () => {
